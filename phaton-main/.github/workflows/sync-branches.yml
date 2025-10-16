@@ -1,0 +1,30 @@
+name: Sync branches
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+      - dg
+      - prof
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Merge into other branches
+        run: |
+          CURRENT_BRANCH=${GITHUB_REF##*/}
+          for BRANCH in main dg prof; do
+            if [ "$BRANCH" != "$CURRENT_BRANCH" ]; then
+              git checkout $BRANCH
+              git merge --no-edit $CURRENT_BRANCH || true
+              git push origin $BRANCH
+            fi
+          done

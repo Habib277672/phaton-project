@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --color-lavender: #e8e3ff;
+  --color-lavender-2: #f1ecff;
+
+  --font-sans: "Inter", "Poppins", "Outfit", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+.bg-lavender {
+  background-color: var(--color-lavender);
+}
+
+.bg-lavender-2 {
+  background-color: var(--color-lavender-2);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

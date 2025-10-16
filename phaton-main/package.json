@@ -1,0 +1,27 @@
+{
+  "name": "phaton-client",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "framer-motion": "^12.23.22",
+    "ipify": "^7.0.0",
+    "lucide-react": "^0.544.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.3",
+    "recharts": "^3.2.1",
+    "swiper": "^12.0.2",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "vite": "^7.1.9"
+  }
+}
